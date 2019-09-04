@@ -9,6 +9,7 @@ class SessionForm extends React.Component {
         // };
         this.state = this.props.formFields;
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleDemo = this.handleDemo.bind(this);
     }
 
     handleInput(field) {
@@ -20,10 +21,12 @@ class SessionForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
-        this.props.processForm(user);
+        this.props.processForm(user)
+            .then(this.props.closeModal);
     }
 
     renderErrors() {
+        // console.log(this.props.errors);
         return (
             <ul>
                 {this.props.errors.map((error, i) => (
@@ -35,6 +38,14 @@ class SessionForm extends React.Component {
         );
     }
 
+    handleDemo(e) {
+        e.preventDefault();
+        this.props.processForm({
+        email: 'demo@email.com',
+        password: 'password'
+        }).then(this.props.closeModal);
+    }
+
     componentWillUnmount() {
         this.props.clearErrors();
     }
@@ -43,6 +54,7 @@ class SessionForm extends React.Component {
         if (this.props.formType === 'Login') {
         return (
             <div>
+                <div onClick={this.props.closeModal}>&times;</div>
                 <form onSubmit={this.handleSubmit}>
                     <br />
                     <label>
@@ -66,14 +78,19 @@ class SessionForm extends React.Component {
                     </label>
 
                     <br />
-
+                    OR
+                    <br/>
                     <input type="submit" value={this.props.formType} />
+                    <input type="submit" onClick={this.handleDemo} value="Demo Log in" />
+                    {this.props.otherForm}
+                    {this.renderErrors()}
                 </form>
             </div>
         );
         } else {
             return (
                 <div>
+                    <div onClick={this.props.closeModal}>&times;</div>
                     <form onSubmit={this.handleSubmit}>
                         <br />
                         <label>
@@ -119,8 +136,11 @@ class SessionForm extends React.Component {
                         </label>
 
                         <br />
-
-                        <input type="submit" value={this.props.formType} />
+                        OR
+                        <br/>
+                        <input type="submit" value={this.props.formType}/>
+                        Dont have an account? {this.props.otherForm}
+                        {this.renderErrors()}
                     </form>
                 </div>
             );        
