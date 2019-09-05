@@ -28,9 +28,9 @@ class SessionForm extends React.Component {
     renderErrors() {
         // console.log(this.props.errors);
         return (
-            <ul>
+            <ul className="modal-ul">
                 {this.props.errors.map((error, i) => (
-                    <li key={`error-${i}`}>
+                    <li className="modal-li" key={`error-${i}`}>
                         {error}
                     </li>
                 ))}
@@ -53,94 +53,71 @@ class SessionForm extends React.Component {
     render() {
         if (this.props.formType === 'Login') {
         return (
-            <div>
-                <div onClick={this.props.closeModal}>&times;</div>
-                <form onSubmit={this.handleSubmit}>
-                    <br />
+            <div className="modal-container">
+                <img className="modal-x" onClick={this.props.closeModal} src="/assets/x-close.png" />
+                <br/>
+                <form className="modal-form" onSubmit={this.handleSubmit}>
+                        <h2 className="modal-header">Welcome back</h2>
                     <label>
-                        E-mail:
-                        <input
-                            type="text"
-                            value={this.state.email}
-                            onChange={this.handleInput("email")}
-                            />
+                    
+                        <p className="modal-fields">Email:</p>
+                        <input className="email-input" placeholder="Email" type="email" value={this.state.email} onChange={this.handleInput("email")} />
                     </label>
-
-                    <br />
-
+                    
                     <label>
-                        Password:
-                        <input 
-                            type="password"
-                            value={this.state.password}
-                            onChange={this.handleInput("password")}
-                            />
-                    </label>
-
                     <br />
-                    OR
-                    <br/>
-                    <input type="submit" value={this.props.formType} />
-                    <input type="submit" onClick={this.handleDemo} value="Demo Log in" />
-                    {this.props.otherForm}
-                    {this.renderErrors()}
+                        <span className="modal-fields"><p>Password:</p><p className="forgot-password">Forgot your password?</p></span>
+                        <input className="password-input" placeholder="Password" type="password" value={this.state.password} onChange={this.handleInput("password")} />
+                    </label>
+                    <br />
+                        <input className="modal-button" type="submit" value={this.props.formType} />
+                    <br />
+                        <input className="modal-button" type="submit" onClick={this.handleDemo} value="Demo Log in" />
+                    <br />
+                        <p className="modal-or">or</p>
+                    
+                        <p className="modal-footer">Don't have an account?</p><p className="footer-button">{this.props.otherForm}</p>
+                        <span className="modal-errors">{this.renderErrors()}</span>
                 </form>
             </div>
         );
         } else {
             return (
-                <div>
-                    <div onClick={this.props.closeModal}>&times;</div>
-                    <form onSubmit={this.handleSubmit}>
-                        <br />
+                <div className="modal-container">
+                    <img className="modal-x" onClick={this.props.closeModal} src="/assets/x-close.png" />
+                    <form className="modal-form" onSubmit={this.handleSubmit}>
+                            <h2 className="modal-header">Welcome to Turbo</h2>
                         <label>
-                            First Name:
-                        <input
-                                type="text"
-                                value={this.state.first_name}
-                                onChange={this.handleInput("first_name")}
-                            />
+                        
+                            <p className="modal-fields">First Name:</p>
+                            <input className="fname-input" placeholder="First Name" type="text" value={this.state.first_name} onChange={this.handleInput("first_name")}/>
                         </label>
-
-                        <br />
-
+                        
                         <label>
-                            Last Name:
-                        <input
-                                type="text"
-                                value={this.state.last_name}
-                                onChange={this.handleInput("last_name")}
-                            />
-                        </label>
-
                         <br />
-
+                            <p className="modal-fields">Last Name:</p>
+                            <input className="lname-input" placeholder="Last Name" type="text" value={this.state.last_name} onChange={this.handleInput("last_name")}/>
+                        </label>
+                        
                         <label>
-                            E-mail:
-                        <input
-                                type="text"
-                                value={this.state.email}
-                                onChange={this.handleInput("email")}
-                            />
-                        </label>
-
                         <br />
-
+                            <p className="modal-fields">Email:</p>
+                            <input className="email-input" placeholder="Email" type="email" value={this.state.email} onChange={this.handleInput("email")} />
+                        </label>
+                        
                         <label>
-                            Password:
-                        <input
-                                type="password"
-                                value={this.state.password}
-                                onChange={this.handleInput("password")}
-                            />
-                        </label>
-
                         <br />
-                        OR
+                            <p className="modal-fields">Password:</p>
+                            <input className="password-input" placeholder="Password" type="password" value={this.state.password} onChange={this.handleInput("password")} />
+                        </label>
                         <br/>
-                        <input type="submit" value={this.props.formType}/>
-                        Dont have an account? {this.props.otherForm}
-                        {this.renderErrors()}
+                            <input className="modal-button" type="submit" value="Sign up with email"/>
+                        <br />
+                            <p className="modal-or">or</p>
+                        
+                            <span><p className="modal-footer">Already have an account?</p><p className="footer-button">{this.props.otherForm}</p></span>
+                        <br/>
+                        <span className="modal-errors">{this.renderErrors()}</span>
                     </form>
                 </div>
             );        

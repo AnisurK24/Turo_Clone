@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     
     
+    window.getState = store.getState;
     
     
     const root = document.getElementById('root');
@@ -31,7 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// window.getState = store.getState;
 // window.dispatch = store.dispatch;
 
 // window.signup = signup;
