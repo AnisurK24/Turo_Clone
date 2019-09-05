@@ -8,154 +8,154 @@
   z-index: 10;
 }
 
-.modal-child {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+// .modal-child {
+//   position: fixed;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+// }
 
-.modal-header {
-  font-size: 40px;
-  line-height: 1.2;
-  margin: 30px 0 10px;
-  text-transform: none;
-  font-family: Freight, HoeflerText-Black, Times New Roman, serif;
-}
+// .modal-header {
+//   font-size: 40px;
+//   line-height: 1.2;
+//   margin: 30px 0 10px;
+//   text-transform: none;
+//   font-family: Freight, HoeflerText-Black, Times New Roman, serif;
+// }
 
-.modal-or {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  text-align: center;
-  font-size: 17px;
-  font-weight: bold;
-}
+// .modal-or {
+//   margin-top: 20px;
+//   margin-bottom: 20px;
+//   text-align: center;
+//   font-size: 17px;
+//   font-weight: bold;
+// }
 
-.modal-fields {
-  display: block;
-  margin-bottom: 3px;
-  font-weight: normal;
-  font-size: 13px;
-  text-transform: none;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  color: #FFFFFF;
-  text-align: left;
-}
+// .modal-fields {
+//   display: block;
+//   margin-bottom: 3px;
+//   font-weight: normal;
+//   font-size: 13px;
+//   text-transform: none;
+//   box-sizing: border-box;
+//   margin: 0;
+//   padding: 0;
+//   color: #FFFFFF;
+//   text-align: left;
+// }
 
-.forgot-password {
-  font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
-  // font-weight: bold;
-  color: #59D389;
-  // text-decoration: none;
-  cursor: pointer;
-  position: absolute;
-  top: 225px;
-  right: 40px;
-  // font-size: 11px;
-  // text-align: right;
-}
+// .forgot-password {
+//   font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
+//   // font-weight: bold;
+//   color: #59D389;
+//   // text-decoration: none;
+//   cursor: pointer;
+//   position: absolute;
+//   top: 225px;
+//   right: 40px;
+//   // font-size: 11px;
+//   // text-align: right;
+// }
 
-.email-input, .password-input, .fname-input, .lname-input {
-  font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
-    height: 35px;
-    padding: 3px 10px;
-    font-size: 13px;
-    border: 1px solid #C7C7C7;
-    color: #231F20;
-    width: 94.5%;
-    border-radius: 0;
-}
+// .email-input, .password-input, .fname-input, .lname-input {
+//   font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
+//     height: 35px;
+//     padding: 3px 10px;
+//     font-size: 13px;
+//     border: 1px solid #C7C7C7;
+//     color: #231F20;
+//     width: 94.5%;
+//     border-radius: 0;
+// }
 
-.modal-container {
-  height: 100%;
-  padding: 40px 30px;
-  text-align: center;
-}
+// .modal-container {
+//   height: 100%;
+//   // padding: 40px 30px;
+//   text-align: center;
+// }
 
-.modal-footer {
-  margin-top: 20px;
-  line-height: 34px;
-  text-align: left;
-  font-family: inherit;
-  font-weight: normal;
-  font-size: 16px;
-}
+// .modal-footer {
+//   margin-top: 20px;
+//   line-height: 34px;
+//   text-align: left;
+//   font-family: inherit;
+//   font-weight: normal;
+//   font-size: 16px;
+// }
 
-.footer-button {
-  background-color: transparent;
-  color: #FFFFFF;
-  border: 1px solid #FFFFFF;
-  user-select: none;
-  border-radius: 0;
-  outline: none;
-  font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
-  font-weight: bold;
-  height: 34px;
-  line-height: 33px;
-  padding: 0 14px;
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  text-align: right;
-  vertical-align: top;
-  font-size: 16px;
-  transition: 0.5s all ease;
-  align-items: flex-start;
-}
+// .footer-button {
+//   background-color: transparent;
+//   color: #FFFFFF;
+//   border: 1px solid #FFFFFF;
+//   user-select: none;
+//   border-radius: 0;
+//   outline: none;
+//   font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
+//   font-weight: bold;
+//   height: 34px;
+//   line-height: 33px;
+//   padding: 0 14px;
+//   position: relative;
+//   display: inline-block;
+//   cursor: pointer;
+//   text-align: right;
+//   vertical-align: top;
+//   font-size: 16px;
+//   transition: 0.5s all ease;
+//   align-items: flex-start;
+// }
 
-.modal-button {
-  background-color: #59D389;
-  color: #FFFFFF;
-  border: 1px solid #59D389;
-  position: relative;
-  margin-top: 10px;
-  width: 100%;
-  height: 50px;
-  line-height: 49px;
-  font-size: 18px;
-  padding: 0 19px;
-  user-select: none;
-  border-radius: 0;
-  outline: none;
-  font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
-  font-weight: bold;
-  display: inline-block;
-  cursor: pointer;
-  text-align: center;
-  vertical-align: top;
-  transition: 0.5s all ease;
-}
-
-
+// .modal-button {
+//   background-color: #59D389;
+//   color: #FFFFFF;
+//   border: 1px solid #59D389;
+//   position: relative;
+//   margin-top: 10px;
+//   width: 100%;
+//   height: 50px;
+//   line-height: 49px;
+//   font-size: 18px;
+//   padding: 0 19px;
+//   user-select: none;
+//   border-radius: 0;
+//   outline: none;
+//   font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
+//   font-weight: bold;
+//   display: inline-block;
+//   cursor: pointer;
+//   text-align: center;
+//   vertical-align: top;
+//   transition: 0.5s all ease;
+// }
 
 
 
 
 
-.modal-x {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  cursor: pointer;
-  height: auto;
-  width: 3%;
-}
 
-.modal-form {
-  width: 396px;
-  height: 534px;
-  background-image: url('/assets/modal-bg.jpg');
-  font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
-  font-size: 13px;
-  color: #FFFFFF;
-  line-height: 1.5;
-  display: block;
-  border-radius: 8px;
-  padding: 20px;
-  align-content: center;
-}
+
+// .modal-x {
+//   position: absolute;
+//   top: 10px;
+//   right: 15px;
+//   cursor: pointer;
+//   height: auto;
+//   width: 3%;
+// }
+
+// .modal-form {
+//   width: 396px;
+//   height: 534px;
+//   background-image: url('/assets/modal-bg.jpg');
+//   font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
+//   font-size: 13px;
+//   color: #FFFFFF;
+//   line-height: 1.5;
+//   display: block;
+//   border-radius: 8px;
+//   padding: 20px;
+//   align-content: center;
+// }
 
 // .forgot-password {
 //   cursor: pointer;

@@ -55,7 +55,7 @@ class SessionForm extends React.Component {
         return (
             <div className="modal-container">
                 <img className="modal-x" onClick={this.props.closeModal} src="/assets/x-close.png" />
-                <br/>
+                
                 <form className="modal-form" onSubmit={this.handleSubmit}>
                         <h2 className="modal-header">Welcome back</h2>
                     <label>
