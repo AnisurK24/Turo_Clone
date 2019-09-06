@@ -29,12 +29,17 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "webpack": "webpack --watch --mode=development"
+    "webpack": "webpack --watch --mode=development",
+    "postinstall": "webpack"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "redux-devtools-extension": "^2.13.8"
+  },
+  "engines": {
+    "node": "10.13.0",
+    "npm": "6.4.1"
   }
 }
