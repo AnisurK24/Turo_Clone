@@ -38,13 +38,43 @@ class SessionForm extends React.Component {
         );
     }
 
-    handleDemo(e) {
+    async handleDemo(e) {
         e.preventDefault();
-        this.props.processForm({
-        email: 'demo@email.com',
-        password: 'password'
-        }).then(this.props.closeModal);
+
+        const demoUser = {
+            email: 'demo@email.com',
+            password: 'password'
+        };
+
+        const sleep = ms => new Promise(res => setTimeout(res, ms));
+
+        document.getElementById('email-input').focus();
+        for (let i = 1; i <= demoUser.email.length; i++) {
+            this.setState({ email: demoUser.email.substr(0, i) });
+            await sleep(100);
+        }
+
+        await sleep(500);
+
+        document.getElementById('password-input').focus();
+        for (let i = 1; i <= demoUser.password.length; i++) {
+            this.setState({ password: demoUser.password.substr(0, i) });
+            await sleep(100);
+        }
+
+        await sleep(500);
+
+        document.getElementById('session-submit-btn').click();
+        document.getElementById('password-input').blur();
     }
+
+    // handleDemo(e) {
+    //     e.preventDefault();
+    //     this.props.processForm({
+    //     email: 'demo@email.com',
+    //     password: 'password'
+    //     }).then(this.props.closeModal);
+    // }
 
     componentWillUnmount() {
         this.props.clearErrors();
@@ -61,23 +91,23 @@ class SessionForm extends React.Component {
                     <label>
                     
                         <p className="modal-fields">Email:</p>
-                        <input className="email-input" placeholder="Email" type="email" value={this.state.email} onChange={this.handleInput("email")} />
+                        <input className="email-input" id="email-input" placeholder="Email" type="email" value={this.state.email} onChange={this.handleInput("email")} />
                     </label>
                     
                     <label>
-                    <br />
+                    
                         <div className="modal-fields">
                             <span className="fgpw">
                                 <p>Password:</p>
                                 <p className="forgot-password">Forgot your password?</p>
                             </span>
                         </div>
-                        <input className="password-input" placeholder="Password" type="password" value={this.state.password} onChange={this.handleInput("password")} />
+                        <input className="password-input" id="password-input" placeholder="Password" type="password" value={this.state.password} onChange={this.handleInput("password")} />
                     </label>
                     <br />
-                        <input className="modal-button" type="submit" value={this.props.formType} />
+                    <input className="modal-button" id="session-submit-btn" type="submit" value={this.props.formType} />
                     <br />
-                        <input className="modal-button" type="submit" onClick={this.handleDemo} value="Demo Log in" />
+                        <input className="modal-button" type="submit" onClick={this.handleDemo} value="Demo Login" />
                     
                         <p className="modal-or">or</p>
                         <span className="footer-form">
@@ -100,19 +130,19 @@ class SessionForm extends React.Component {
                         </label>
                         
                         <label>
-                        <br />
+                        
                             <p className="modal-fields">Last Name:</p>
                             <input className="lname-input" placeholder="Last Name" type="text" value={this.state.last_name} onChange={this.handleInput("last_name")}/>
                         </label>
                         
                         <label>
-                        <br />
+                        
                             <p className="modal-fields">Email:</p>
                             <input className="email-input" placeholder="Email" type="email" value={this.state.email} onChange={this.handleInput("email")} />
                         </label>
                         
                         <label>
-                        <br />
+                        
                             <p className="modal-fields">Password:</p>
                             <input className="password-input" placeholder="Password" type="password" value={this.state.password} onChange={this.handleInput("password")} />
                         </label>

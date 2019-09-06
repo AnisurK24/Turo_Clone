@@ -62,27 +62,21 @@
 
 .modal-fields {
   display: flex;
-  // margin-bottom: 2px;
   font-weight: normal;
-  font-size: 13px;
+  font-size: 15px;
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
   color: #FFFFFF;
   text-align: left;
 }
 
 .forgot-password {
   font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
-  // font-weight: bold;
   color: #59D389;
-  // text-decoration: none;
   cursor: pointer;
   position: absolute;
-  // top: 225px;
-  right: 20px;
+  line-height: 27px;
+  right: 21px;
   font-size: 11px;
-  // text-align: right;
 }
 
 .fgpw {
@@ -91,24 +85,17 @@
 
 .email-input, .password-input, .fname-input, .lname-input {
   font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
-    height: 35px;
-    padding: 0px 10px;
-    font-size: 13px;
-    border: 1px solid #C7C7C7;
-    color: #231F20;
-    width: 94.5%;
-    // border-radius: 0;
+  height: 35px;
+  padding: 0px 10px;
+  font-size: 15px;
+  border: 1px solid #C7C7C7;
+  width: 94.5%;
+  margin-bottom: 7px;
 }
 
-// .modal-container {
-//   height: 100%;
-//   // padding: 40px 30px;
-//   text-align: center;
-// }
 
 .modal-footer {
   margin-top: 6px;
-  // line-height: 34px;
   text-align: left;
   font-family: inherit;
   font-weight: normal;
@@ -120,21 +107,14 @@
   background-color: transparent;
   color: #FFFFFF;
   border: 1px solid #FFFFFF;
-  // user-select: none;
-  // border-radius: 0;
-  // outline: none;
   font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
   font-weight: bold;
   height: 34px;
   line-height: 33px;
   padding: 0 14px;
   position: relative;
-  // display: inline-block;
   cursor: pointer;
-  // text-align: right;
-  // vertical-align: top;
   font-size: 16px;
-  // transition: 0.5s all ease;
   align-items: center;
 }
 
@@ -143,78 +123,15 @@
   color: #FFFFFF;
   border: 1px solid #59D389;
   position: relative;
-  // margin-top: 10px;
   width: 100%;
   height: 45px;
   line-height: 43px;
   font-size: 18px;
-  // padding: 0 19px;
-  // user-select: none;
-  // border-radius: 0;
-  // outline: none;
   font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
-  // font-weight: bold;
-  // display: inline-block;
   cursor: pointer;
-  // text-align: center;
-  // vertical-align: top;
-  // transition: 0.5s all ease;
 }
 
 .footer-form {
   display: flex;
   justify-content: center;
 }
-
-
-
-
-
-
-
-
-// .modal-form {
-//   width: 396px;
-//   height: 534px;
-//   background-image: url('/assets/modal-bg.jpg');
-//   font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
-//   font-size: 13px;
-//   color: #FFFFFF;
-//   line-height: 1.5;
-//   display: block;
-//   border-radius: 8px;
-//   padding: 20px;
-//   align-content: center;
-// }
-
-// .forgot-password {
-//   cursor: pointer;
-//   color: #59D389;
-//   align-content: flex-end
-// }
-
-// .modal-form input[type="text"], input[type="password"], input[type="email"] {
-//   font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
-//   width: 100%;
-//   height: 35px;
-//   font-size: 13px;
-//   color: #231F20;
-//   border: 1px solid #ddd;
-//   border-radius: 3px;
-//   padding: 10px;
-//   box-sizing: border-box;
-//   box-shadow: inset 0 1px 3px #ddd;
-// }
-
-// .modal-form input[type="submit"] {
-//   width: 100%;
-//   height: 50px;
-//   background: #59D389;
-//   color: #FFFFFF;
-//   font-weight: 100;
-//   font-family: BasisGrotesque,Avenir,Helvetica Neue,Helvetica,sans-serif;
-//   font-size: 18px;
-//   border: 0px;
-//   cursor: pointer;
-// }
-
