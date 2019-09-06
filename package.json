@@ -28,8 +28,8 @@
     "test": "test"
   },
   "scripts": {
-    "webpack": "webpack --watch --mode=development",
-    "postinstall": "webpack"
+    "postinstall": "webpack",
+    "webpack": "webpack --watch --mode=development"
   },
   "keywords": [],
   "author": "",
