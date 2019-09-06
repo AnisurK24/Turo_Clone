@@ -16,10 +16,10 @@ const App = () => (
                 <img className="turbo-logo" src="/assets/turbo-logo.jpeg" alt="logo"/>
             </Link>
             <NavBarContainer />
-            <AuthRoute exact path="/login" component={LogInFormContainer} />
-            <AuthRoute exact path="/signup" component={SignUpFormContainer} />
+            {/* <AuthRoute exact path="/login" component={LogInFormContainer} /> */}
+            {/* <AuthRoute exact path="/signup" component={SignUpFormContainer} /> */}
         </header>
-        
+
         <Switch>
             <Route path="/" component={LandingContainer} />
         </Switch>

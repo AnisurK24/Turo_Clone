@@ -1,0 +1,63 @@
+.landing-container {
+    background-image: url('/assets/hero-porsche-coast.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: block;
+    width: 100%;
+    height: 615px;
+    background-position: bottom;
+    position: relative;
+}
+
+.landing-form {
+    padding-top: 10%;
+}
+
+.banner {
+    font-size: 72px;
+    margin-bottom: 15px;
+    font-family: Freight, HoeflerText-Black, Times New Roman, serif;
+    color: white;
+    text-align: center;
+    // white-space: nowrap;
+}
+
+.small-banner {
+    margin-bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
+    font-weight: bold;
+    line-height: 1.2;
+    color: white;
+    text-align: center;
+    font-size: 22px;
+}
+
+.landing-insurance {
+    position: relative;
+    border-radius: 25px 25px 0 0;
+    background-color: #fff;
+    display: block;
+    width: 287px;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 35px;
+    text-align: center;
+}
+
+.insurance-text {
+    font-size: 11px;
+    font-weight: 700;
+    color: #949494;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 10px 0;
+    padding-top: 10px;
+    font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
+}
+
+.insurance-img {
+    width: 154px;
+    height: 40px;
+}

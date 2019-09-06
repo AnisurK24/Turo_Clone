@@ -66,17 +66,23 @@ class SessionForm extends React.Component {
                     
                     <label>
                     <br />
-                        <span className="modal-fields"><p>Password:</p><p className="forgot-password">Forgot your password?</p></span>
+                        <div className="modal-fields">
+                            <span className="fgpw">
+                                <p>Password:</p>
+                                <p className="forgot-password">Forgot your password?</p>
+                            </span>
+                        </div>
                         <input className="password-input" placeholder="Password" type="password" value={this.state.password} onChange={this.handleInput("password")} />
                     </label>
                     <br />
                         <input className="modal-button" type="submit" value={this.props.formType} />
                     <br />
                         <input className="modal-button" type="submit" onClick={this.handleDemo} value="Demo Log in" />
-                    <br />
-                        <p className="modal-or">or</p>
                     
-                        <p className="modal-footer">Don't have an account?</p><p className="footer-button">{this.props.otherForm}</p>
+                        <p className="modal-or">or</p>
+                        <span className="footer-form">
+                            <p className="modal-footer">Don't have an account?</p><p className="footer-button">{this.props.otherForm}</p>
+                        </span>
                         <span className="modal-errors">{this.renderErrors()}</span>
                 </form>
             </div>
@@ -112,10 +118,11 @@ class SessionForm extends React.Component {
                         </label>
                         <br/>
                             <input className="modal-button" type="submit" value="Sign up with email"/>
-                        <br />
-                            <p className="modal-or">or</p>
                         
-                            <span><p className="modal-footer">Already have an account?</p><p className="footer-button">{this.props.otherForm}</p></span>
+                            <p className="modal-or">or</p>
+                            <span className="footer-form">
+                                <p className="modal-footer">Already have an account?</p><p className="footer-button">{this.props.otherForm}</p>
+                            </span>
                         <br/>
                         <span className="modal-errors">{this.renderErrors()}</span>
                     </form>
