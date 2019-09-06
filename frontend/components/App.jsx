@@ -13,7 +13,7 @@ const App = () => (
         <Modal />
         <header className="navbar">
             <Link to="/">
-                <img className="turbo-logo" src="/assets/turbo-logo.jpeg" alt="logo"/>
+                <img className="turbo-logo" src={window.turbo} alt="logo"/>
             </Link>
             <NavBarContainer />
             {/* <AuthRoute exact path="/login" component={LogInFormContainer} /> */}

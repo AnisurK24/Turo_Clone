@@ -9,8 +9,42 @@
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     
+    <script type="text/javascript">
+      window.xclose = "<%= image_url('x-close.png') %>";
+    </script>
 
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script type="text/javascript">
+      window.turbo = "<%= image_url('turbo-logo.jpeg') %>";
+    </script>
+
+    <script type="text/javascript">
+      window.profileicon = "<%= image_url('profile-icon.png') %>";
+    </script>
+
+    <script type="text/javascript">
+      window.modalbg = "<%= image_url('modal-bg.jpg') %>";
+    </script>
+
+    <script type="text/javascript">
+      window.liberty = "<%= image_url('liberty.png') %>";
+    </script>
+
+    <script type="text/javascript">
+      window.heroporsche = "<%= image_url('hero-porsche-coast.jpg') %>";
+    </script>
+
+    <script type="text/javascript">
+      window.google = "<%= image_url('google.png') %>";
+    </script>
+
+    <script type="text/javascript">
+      window.porsche = "<%= image_url('porsche.jpg') %>";
+    </script>
+
+
+
+
+
     
     <% if logged_in? %>
       <script>

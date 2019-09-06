@@ -23,7 +23,7 @@ class Landing extends React.Component {
             </div>
             <div className="landing-insurance">
                 <p className="insurance-text">INSURANCE PROVIDER</p>
-                <img className="insurance-img" src="/assets/liberty.png" alt="Liberty Insurance"/>
+                    <img className="insurance-img" src={window.liberty} alt="Liberty Insurance"/>
             </div>
 
 

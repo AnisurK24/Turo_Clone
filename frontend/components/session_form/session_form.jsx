@@ -84,7 +84,7 @@ class SessionForm extends React.Component {
         if (this.props.formType === 'Login') {
         return (
             <div className="modal-container">
-                <img className="modal-x" onClick={this.props.closeModal} src="/assets/x-close.png" />
+                <img className="modal-x" onClick={this.props.closeModal} src={window.xclose} />
                 
                 <form className="modal-form" onSubmit={this.handleSubmit}>
                         <h2 className="modal-header">Welcome back</h2>
@@ -110,7 +110,7 @@ class SessionForm extends React.Component {
                         <input className="modal-button" type="submit" onClick={this.handleDemo} value="Demo Login" />
                     
                         <p className="modal-or">or</p>
-                        <img className="google-continue" src="/assets/google.png" alt="Continue With Google"/>
+                    <img className="google-continue" src={window.google} alt="Continue With Google"/>
                         <span className="footer-form">
                             <p className="modal-footer">Don't have an account?</p><p className="footer-button">{this.props.otherForm}</p>
                         </span>
@@ -121,7 +121,7 @@ class SessionForm extends React.Component {
         } else {
             return (
                 <div className="modal-container">
-                    <img className="modal-x" onClick={this.props.closeModal} src="/assets/x-close.png" />
+                    <img className="modal-x" onClick={this.props.closeModal} src={window.xclose} />
                     <form className="modal-form" onSubmit={this.handleSubmit}>
                             <h2 className="modal-header">Welcome to Turbo</h2>
                         <label>
@@ -151,7 +151,7 @@ class SessionForm extends React.Component {
                             <input className="modal-button" type="submit" value="Sign up with email"/>
                         
                             <p className="modal-or">or</p>
-                            <img className="google-continue" src="/assets/google.png" alt="Continue With Google" />
+                        <img className="google-continue" src={window.google} alt="Continue With Google" />
                             <span className="footer-form">
                                 <p className="modal-footer">Already have an account?</p><p className="footer-button">{this.props.otherForm}</p>
                             </span>

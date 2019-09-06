@@ -29,7 +29,7 @@ const Navbar = ({ currentUser, logout, openModal }) => {
                 {/* <Link to="/login">List Your Car</Link>
                 <Link to="/login">Login</Link>
                 <Link to="/signup">Sign up</Link> */}
-                <img className="profile-out" src="/assets/profile-icon.png" alt="profile"/>
+                <img className="profile-out" src={window.profileicon} alt="profile"/>
             </nav>
         )
     };
@@ -61,7 +61,7 @@ const Navbar = ({ currentUser, logout, openModal }) => {
                 <button className='navbtn' >Messages</button>
                         {/* {currentUser.email} {currentUser.first_name} */}
                         <div className="profile-dropdown">
-                        <img className="profile-in" src="/assets/profile-icon.png" alt="profile" />
+                        <img className="profile-in" src={window.profileicon} alt="profile" />
                         <div className="dropdown-container">
                         <div className="dropdown-profile-content">
                         <div className="triangle-profile"></div>
