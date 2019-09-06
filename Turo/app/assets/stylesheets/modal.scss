@@ -133,9 +133,10 @@
   transition-duration: 0.4s;
 }
 
-// .modal-button:hover {
-//   background-color:rgba(0, 0, 0, 0.1);
-// }
+.modal-button:hover {
+  border-color: rgb(85, 200, 130);
+  background-color: rgb(85, 200, 130);
+}
 
 .footer-form {
   display: flex;
@@ -164,6 +165,6 @@
   transition-duration: 0.4s;
 }
 
-// .google-continue:hover {
-//   background-color:rgba(0, 0, 0, 0.1);
-// }
+.google-continue:hover {
+  background-color:rgba(0, 0, 0, 0.1);
+}

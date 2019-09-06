@@ -29,14 +29,14 @@ const Navbar = ({ currentUser, logout, openModal }) => {
                 {/* <Link to="/login">List Your Car</Link>
                 <Link to="/login">Login</Link>
                 <Link to="/signup">Sign up</Link> */}
-                <img className="profile-out" src="/assets/profile-icon.png" alt=""/>
+                <img className="profile-out" src="/assets/profile-icon.png" alt="profile"/>
             </nav>
         )
     };
 
     const loggedIn = () => {
         return (
-            <nav className="button-container">
+            <nav className="button-container-in">
                 <Link to="/cars/new">
                     <button className="list-in">List your car</button>
                 </Link>
@@ -59,13 +59,21 @@ const Navbar = ({ currentUser, logout, openModal }) => {
                 </div>
                 <button className='navbtn' >Trips</button>
                 <button className='navbtn' >Messages</button>
-                {/* <div className="dropdown">
-                    <div className="nav-profile" />
-                    <div className="dropdown-content"> */}
                         {/* {currentUser.email} {currentUser.first_name} */}
-                        <button className="navbtn" onClick={() => logout()}>Log out</button>
-                    {/* </div>
-                </div> */}
+                        <div className="profile-dropdown">
+                        <img className="profile-in" src="/assets/profile-icon.png" alt="profile" />
+                        <div className="dropdown-container">
+                        <div className="dropdown-profile-content">
+                        <div className="triangle-profile"></div>
+                        <p className="dropdown-pr-li">Account</p>
+                        <p className="dropdown-pr-li">Profile</p>
+                        <p className="dropdown-pr-li">Favorites</p>
+                        <div className="dropdown-separator"></div>
+                        <p className="dropdown-pr-li">Contact support</p>
+                        <p className="dropdown-pr-li" onClick={() => logout()}>Log out</p>
+                    </div>
+                    </div>
+                </div>
             </nav>
         )
     };
