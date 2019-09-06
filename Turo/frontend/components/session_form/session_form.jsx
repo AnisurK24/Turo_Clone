@@ -110,6 +110,7 @@ class SessionForm extends React.Component {
                         <input className="modal-button" type="submit" onClick={this.handleDemo} value="Demo Login" />
                     
                         <p className="modal-or">or</p>
+                        <img className="google-continue" src="/assets/google.png" alt="Continue With Google"/>
                         <span className="footer-form">
                             <p className="modal-footer">Don't have an account?</p><p className="footer-button">{this.props.otherForm}</p>
                         </span>
@@ -150,10 +151,11 @@ class SessionForm extends React.Component {
                             <input className="modal-button" type="submit" value="Sign up with email"/>
                         
                             <p className="modal-or">or</p>
+                            <img className="google-continue" src="/assets/google.png" alt="Continue With Google" />
                             <span className="footer-form">
                                 <p className="modal-footer">Already have an account?</p><p className="footer-button">{this.props.otherForm}</p>
                             </span>
-                        <br/>
+                        
                         <span className="modal-errors">{this.renderErrors()}</span>
                     </form>
                 </div>

@@ -19,6 +19,8 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
+button:focus {outline:0;}
+
 @font-face{
   font-family: Freight;
   src: url(https://resources.turo.com/resources/fonts/freight/freight.woff2)

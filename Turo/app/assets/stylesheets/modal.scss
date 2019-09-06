@@ -26,8 +26,8 @@
 
 .modal-container {
   display: flex;
-  width: 396px;
-  height: 534px;
+  width: 400px;
+  height: 588px;
   background-image: url('/assets/modal-bg.jpg');
   border-radius: 8px;
   padding: 20px;
@@ -42,13 +42,14 @@
   width: 100%;
   align-content: center;
   flex-direction: column;
+  // height: auto;
 }
 
 .modal-header {
   font-size: 40px;
   line-height: 1.2;
   text-align: center;
-  margin: 30px 0 10px;
+  margin: 5px 0px;
   font-family: Freight, HoeflerText-Black, Times New Roman, serif;
 }
 
@@ -129,9 +130,40 @@
   font-size: 18px;
   font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
   cursor: pointer;
+  transition-duration: 0.4s;
 }
+
+// .modal-button:hover {
+//   background-color:rgba(0, 0, 0, 0.1);
+// }
 
 .footer-form {
   display: flex;
   justify-content: center;
 }
+
+.modal-errors {
+  display: flex;
+
+
+  .modal-ul {
+  margin-left: 30px;
+  margin-top: 1px;
+  }
+
+  .modal-li {
+    color: red;
+  }
+
+}
+
+.google-continue {
+  cursor: pointer;
+  border: 1px solid #231f20;
+  margin-bottom: 10px;
+  transition-duration: 0.4s;
+}
+
+// .google-continue:hover {
+//   background-color:rgba(0, 0, 0, 0.1);
+// }

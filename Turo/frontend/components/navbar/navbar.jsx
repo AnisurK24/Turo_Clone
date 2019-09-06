@@ -7,7 +7,23 @@ const Navbar = ({ currentUser, logout, openModal }) => {
         return (
             <nav className="button-container">
                 <button className='navbtn' onClick={() => openModal('Login')}>List Your Car</button>
+                <div className="learn-dropdown">
                 <button className='learn-drop'>Learn more</button>
+                <div className="dropdown-container">
+                <div className="dropdown-content">
+                    <div className="triangle-learn"></div>
+                    <p className="dropdown-link">How Turo works</p>
+                    <p className="dropdown-link">Book a car</p>
+                    <p className="dropdown-link">Make money from your car</p>
+                    <p className="dropdown-link">Carculator</p>
+                    <div className="dropdown-separator"></div>
+                    <p className="dropdown-link">All-Star Hosts</p>
+                    <p className="dropdown-link">Turo for business</p>
+                    <p className="dropdown-link">Trust & safety</p>
+                    <p className="dropdown-link">Contact support</p>
+                </div>
+                </div>
+                </div>
                 <button className='navbtn' onClick={() => openModal('Login')}>Login</button>
                 <button className='navbtn' onClick={() => openModal('Signup')}>Sign Up</button>
                 {/* <Link to="/login">List Your Car</Link>
@@ -20,10 +36,29 @@ const Navbar = ({ currentUser, logout, openModal }) => {
 
     const loggedIn = () => {
         return (
-            <nav>
+            <nav className="button-container">
                 <Link to="/cars/new">
-                    <button className="navbtn">List your car</button>
+                    <button className="list-in">List your car</button>
                 </Link>
+                <div className="learn-dropdown">
+                    <button className='learn-drop-in'>Learn more</button>
+                    <div className="dropdown-container">
+                        <div className="dropdown-content">
+                            <div className="triangle-learn"></div>
+                            <p className="dropdown-link">How Turo works</p>
+                            <p className="dropdown-link">Book a car</p>
+                            <p className="dropdown-link">Make money from your car</p>
+                            <p className="dropdown-link">Carculator</p>
+                            <div className="dropdown-separator"></div>
+                            <p className="dropdown-link">All-Star Hosts</p>
+                            <p className="dropdown-link">Turo for business</p>
+                            <p className="dropdown-link">Trust & safety</p>
+                            <p className="dropdown-link">Contact support</p>
+                        </div>
+                    </div>
+                </div>
+                <button className='navbtn' >Trips</button>
+                <button className='navbtn' >Messages</button>
                 {/* <div className="dropdown">
                     <div className="nav-profile" />
                     <div className="dropdown-content"> */}
