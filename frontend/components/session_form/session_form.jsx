@@ -54,7 +54,7 @@ class SessionForm extends React.Component {
             await sleep(100);
         }
 
-        await sleep(500);
+        await sleep(250);
 
         document.getElementById('password-input').focus();
         for (let i = 1; i <= demoUser.password.length; i++) {
@@ -62,7 +62,7 @@ class SessionForm extends React.Component {
             await sleep(100);
         }
 
-        await sleep(500);
+        await sleep(250);
 
         document.getElementById('session-submit-btn').click();
         document.getElementById('password-input').blur();
@@ -104,7 +104,9 @@ class SessionForm extends React.Component {
                         </div>
                         <input className="password-input" id="password-input" placeholder="Password" type="password" value={this.state.password} onChange={this.handleInput("password")} />
                     </label>
-                    <br />
+                    
+                    <span className="modal-errors">{this.renderErrors()}</span>
+                    
                     <input className="modal-button" id="session-submit-btn" type="submit" value={this.props.formType} />
                     <br />
                         <input className="modal-button" type="submit" onClick={this.handleDemo} value="Demo Login" />
@@ -114,7 +116,7 @@ class SessionForm extends React.Component {
                         <span className="footer-form">
                             <p className="modal-footer">Don't have an account?</p><p className="footer-button">{this.props.otherForm}</p>
                         </span>
-                        <span className="modal-errors">{this.renderErrors()}</span>
+
                 </form>
             </div>
         );
@@ -147,7 +149,9 @@ class SessionForm extends React.Component {
                             <p className="modal-fields">Password:</p>
                             <input className="password-input" placeholder="Password" type="password" value={this.state.password} onChange={this.handleInput("password")} />
                         </label>
-                        <br/>
+                        
+                        <span className="modal-errors">{this.renderErrors()}</span>
+                        
                             <input className="modal-button" type="submit" value="Sign up with email"/>
                         
                             <p className="modal-or">or</p>
@@ -156,7 +160,7 @@ class SessionForm extends React.Component {
                                 <p className="modal-footer">Already have an account?</p><p className="footer-button">{this.props.otherForm}</p>
                             </span>
                         
-                        <span className="modal-errors">{this.renderErrors()}</span>
+                        
                     </form>
                 </div>
             );        

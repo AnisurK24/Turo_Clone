@@ -37,9 +37,7 @@ const Navbar = ({ currentUser, logout, openModal }) => {
     const loggedIn = () => {
         return (
             <nav className="button-container-in">
-                <Link to="/cars/new">
-                    <button className="list-in">List your car</button>
-                </Link>
+                <Link className="list-in-1" to="/cars/new">List your car</Link>
                 <div className="learn-dropdown">
                     <button className='learn-drop-in'>Learn more</button>
                     <div className="dropdown-container">
@@ -57,14 +55,16 @@ const Navbar = ({ currentUser, logout, openModal }) => {
                         </div>
                     </div>
                 </div>
-                <button className='navbtn' >Trips</button>
-                <button className='navbtn' >Messages</button>
+                <button className='list-in' >Trips</button>
+                <button className='list-in' >Messages</button>
                         {/* {currentUser.email} {currentUser.first_name} */}
                         <div className="profile-dropdown">
                         <img className="profile-in" src={window.profileicon} alt="profile" />
                         <div className="dropdown-container">
                         <div className="dropdown-profile-content">
                         <div className="triangle-profile"></div>
+                        <p className="dropdown-pr-li">Find a car</p>
+                        <div className="dropdown-separator"></div>
                         <p className="dropdown-pr-li">Account</p>
                         <p className="dropdown-pr-li">Profile</p>
                         <p className="dropdown-pr-li">Favorites</p>

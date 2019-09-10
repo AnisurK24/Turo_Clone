@@ -96,7 +96,7 @@
 
 .dropdown-link:hover {
   background-color:rgba(0, 0, 0, 0.1);
-  cursor: pointer;
+  cursor: not-allowed;
 }
 
 .dropdown-separator {
@@ -139,13 +139,34 @@
   color: #ffffff;
   border: none;
   font-size: 13px;
-  cursor: pointer;
-  padding: 0px 10px 10px 10px;
+  cursor: not-allowed;
+  padding: 17px 10px 5px 10px;
   top: -11px;
   position: relative;
 }
 
 .list-in:hover {
+  text-decoration: underline;
+}
+
+.list-in-1 {
+  align-content: center;
+  justify-content: center;
+  background: transparent;
+  color: #ffffff;
+  border: none;
+  font-size: 13px;
+  cursor: not-allowed;
+  padding: 0px 10px 10px 10px;
+  top: -11px;
+  position: relative;
+}
+
+.button-container-in > a {
+  text-decoration: none;
+}
+
+.list-in-1:hover {
   text-decoration: underline;
 }
 
@@ -198,6 +219,11 @@
 }
 
 .dropdown-pr-li:hover {
+  background-color:rgba(0, 0, 0, 0.1);
+  cursor: not-allowed;
+}
+
+.dropdown-pr-li:last-of-type:hover {
   background-color:rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }

@@ -27,10 +27,12 @@
 .modal-container {
   display: flex;
   width: 400px;
-  height: 588px;
+  height: auto;
   background-image: image-url('modal-bg.jpg');
   border-radius: 8px;
-  padding: 20px;
+  padding: 40px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .modal-form {
@@ -73,7 +75,7 @@
 .forgot-password {
   font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
   color: #59D389;
-  cursor: pointer;
+  cursor: not-allowed;
   position: absolute;
   line-height: 27px;
   right: 21px;
@@ -91,7 +93,7 @@
   font-size: 15px;
   border: 1px solid #C7C7C7;
   width: 94.5%;
-  margin-bottom: 7px;
+  margin-bottom: 15px;
 }
 
 
@@ -150,6 +152,7 @@
   .modal-ul {
   margin-left: 30px;
   margin-top: 1px;
+  list-style: none;
   }
 
   .modal-li {
@@ -159,7 +162,7 @@
 }
 
 .google-continue {
-  cursor: pointer;
+  cursor: not-allowed;
   border: 1px solid #231f20;
   margin-bottom: 10px;
   transition-duration: 0.4s;
