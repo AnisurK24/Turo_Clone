@@ -6,7 +6,7 @@ const Navbar = ({ currentUser, logout, openModal }) => {
     const loggedOut = () => {
         return (
             <nav className="button-container">
-                <button className='navbtn' onClick={() => openModal('Login')}>List Your Car</button>
+                <button className='navbtn' onClick={() => openModal('Login')}>List your car</button>
                 <div className="learn-dropdown">
                 <button className='learn-drop'>Learn more</button>
                 <div className="dropdown-container">

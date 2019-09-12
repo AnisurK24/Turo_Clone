@@ -19,7 +19,9 @@ export const createCar = (car) => (
   $.ajax({
     method: "POST",
     url: "api/cars",
-    data: {car}
+    data: {car},
+    contentType: false,
+    processData: false   
   })
 );
 

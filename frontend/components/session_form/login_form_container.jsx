@@ -12,7 +12,6 @@ const mapStateToProps = ({errors}) => ({
         email: '',
         password: ''
     },
-    // navLink: <Link to="/signup">Sign Up</Link>
 });
 
 const mapDispatchToProps = (dispatch) => ({

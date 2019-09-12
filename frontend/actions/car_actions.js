@@ -15,9 +15,9 @@ export const receiveCar = (car) => ({
   car
 });
 
-export const removeCar = (car) => ({
+export const removeCar = (carId) => ({
   type: DELETE_CAR,
-  carId: car.id
+  carId: carId
 });
 
 export const receiveErrors = (errors) => ({
@@ -25,20 +25,25 @@ export const receiveErrors = (errors) => ({
   errors
 });
 
-export const fetchCars = () => dispatch =>
-  CarAPIUtil.fetchCars().then(cars => dispatch(receiveCars(cars)));
+export const fetchCars = () => dispatch => (
+  CarAPIUtil.fetchCars().then(cars => dispatch(receiveCars(cars))
+));
 
-export const fetchCar = (id) => dispatch =>
-  CarAPIUtil.fetchCar(id).then(car => dispatch(receiveCar(car)));
+export const fetchCar = (id) => dispatch => (
+  CarAPIUtil.fetchCar(id).then(car => dispatch(receiveCar(car))
+));
 
-export const createCar = (car) => dispatch =>
+export const editCar = (car) => dispatch => (
+  CarAPIUtil.editCar(car).then(car => dispatch(receiveCar(car))
+));
+
+export const deleteCar = (id) => dispatch => (
+  CarAPIUtil.deleteCar(id).then(car => dispatch(removeCar(car))
+));
+
+export const createCar = (car) => dispatch => (
   CarAPIUtil.createCar(car).then(
-    car => (dispatch(receiveCar(car)), 
-    errors => dispatch(receiveErrors(errors)))
-  );
-
-export const editCar = (car, carId) => dispatch =>
-  CarAPIUtil.editCar(car, carId).then(car => dispatch(receiveCar(car)));
-
-export const deleteCar = (id) => dispatch =>
-  CarAPIUtil.deleteCar(id).then(car => dispatch(removeCar(car)));
+        car => (dispatch(receiveCar(car)), 
+        errors => dispatch(receiveErrors(errors))
+    )
+));
