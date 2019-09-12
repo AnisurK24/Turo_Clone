@@ -14,8 +14,6 @@ ActiveRecord::Base.transaction do
 User.delete_all
 
 
-
-
 User.create!(
     email: 'demo@email.com',
     first_name: 'demo',

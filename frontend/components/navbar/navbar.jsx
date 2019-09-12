@@ -78,11 +78,7 @@ const Navbar = ({ currentUser, logout, openModal }) => {
         )
     };
 
-    if (currentUser) {
-        return loggedIn();
-    } else {
-        return loggedOut();
-    };
+    return currentUser ? (loggedIn()) : (loggedOut())
 
 };
 

@@ -106,7 +106,7 @@ class SessionForm extends React.Component {
                     </label>
                     
                     <span className="modal-errors">{this.renderErrors()}</span>
-                    
+                    <br />
                     <input className="modal-button" id="session-submit-btn" type="submit" value={this.props.formType} />
                     <br />
                         <input className="modal-button" type="submit" onClick={this.handleDemo} value="Demo Login" />
@@ -151,7 +151,7 @@ class SessionForm extends React.Component {
                         </label>
                         
                         <span className="modal-errors">{this.renderErrors()}</span>
-                        
+                        <br />
                             <input className="modal-button" type="submit" value="Sign up with email"/>
                         
                             <p className="modal-or">or</p>

@@ -4,11 +4,10 @@ class Car < ApplicationRecord
 
     validates :rate, :make, :model, :year, :color, :transmission, presence: true
     validates :seats, :description, :plate, :address, :city, :state, :zip, :doors, presence: true
+    validates :transmission, inclusion: %w(automatic manual none)
+    
 
-
-
-
-    belongs_to :owner,
+    belongs_to :user,
     foreign_key: :owner_id, 
     class_name: :User
 

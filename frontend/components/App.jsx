@@ -1,5 +1,5 @@
 import React from 'react';
-import {Route, Switch, Link} from 'react-router-dom';
+import {Redirect, Route, Switch, Link} from 'react-router-dom';
 import { AuthRoute } from '../util/route_util';
 import SignUpFormContainer from './session_form/signup_form_container';
 import LogInFormContainer from './session_form/login_form_container';
@@ -21,7 +21,12 @@ const App = () => (
         </header>
 
         <Switch>
-            <Route path="/" component={LandingContainer} />
+            {/* <Route exact path="/cars" component={CarIndexContainer} />
+            <Route exact path="/cars/new" component={CarCreateContainer} />
+            <Route exact path="/cars/:id" component={CarShowContainer} />
+            <Route exact path="/cars/:id/edit" component={CarUpdateContainer} /> */}
+            <Route exact path="/" component={LandingContainer} />
+            <Redirect to="/" component={LandingContainer}/>
         </Switch>
     </div>
 );
