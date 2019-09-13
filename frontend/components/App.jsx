@@ -7,6 +7,7 @@ import NavBarContainer from './navbar/navbar_container';
 import ModalContainer from './modal/modal_container';
 import LandingContainer from './landing/landing_container';
 import CarCreateContainer from './cars/car_create_container';
+import CarIndexContainer from './cars/car_index_container';
 
 
 const App = () => (
@@ -22,6 +23,7 @@ const App = () => (
         </header>
 
         <Switch>
+            <Route exact path="/cars" component={CarIndexContainer} />
             <ProtectedRoute exact path="/cars/new" component={CarCreateContainer} />
 
             <Route exact path="/" component={LandingContainer} />

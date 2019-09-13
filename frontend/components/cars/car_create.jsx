@@ -25,6 +25,18 @@ class CarCreate extends React.Component {
         }
     }
 
+    renderErrors() {
+        return (
+        <ul className="car-create-errors">
+            {this.props.errors.map((error, i) => (
+            <li key={`error-car-${i}`}>
+                {error}
+            </li>
+            ))}
+        </ul>
+        );
+    }
+
     render() {
 
         return (
@@ -78,12 +90,12 @@ class CarCreate extends React.Component {
                     <input type="text" placeholder="Color" value={this.props.color} onChange={this.handleInput("color")} />
                 </label>
 
-                <label>MPG
-                    <input type="text" placeholder="MPG" value={this.props.mpg} onChange={this.handleInput("mpg")} />
+                <label>Doors
+                    <input type="text" placeholder="Number of doors" value={this.props.doors} onChange={this.handleInput("doors")} />
                 </label>
 
                 <label>Seats
-                    <input type="text" placeholder="Seats" value={this.props.seats} onChange={this.handleInput("seats")} />
+                    <input type="text" placeholder="Number of seats" value={this.props.seats} onChange={this.handleInput("seats")} />
                 </label>
 
                 <label>License plate
@@ -123,6 +135,8 @@ class CarCreate extends React.Component {
                 <br />
 
                 <input className="car-create-finish-btn" type="submit" value="Finish" />
+
+                <span className="car-errors">{this.renderErrors()}</span>
 
             </form>
 
