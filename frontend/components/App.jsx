@@ -8,7 +8,9 @@ import ModalContainer from './modal/modal_container';
 import LandingContainer from './landing/landing_container';
 import CarCreateContainer from './cars/car_create_container';
 import CarIndexContainer from './cars/car_index_container';
+import CarUpdateContainer from './cars/car_update_container';
 
+import Footer from './footer/footer';
 
 const App = () => (
     <div>
@@ -23,12 +25,15 @@ const App = () => (
         </header>
 
         <Switch>
-            <Route exact path="/cars" component={CarIndexContainer} />
+            <ProtectedRoute exact path="/cars/:id/edit" component={CarUpdateContainer} />
             <ProtectedRoute exact path="/cars/new" component={CarCreateContainer} />
-
+            <Route exact path="/cars" component={CarIndexContainer} />
             <Route exact path="/" component={LandingContainer} />
             <Redirect to="/" />
         </Switch>
+
+        <Footer />
+        
     </div>
 );
 

@@ -134,7 +134,7 @@ class CarCreate extends React.Component {
 
                 <br />
 
-                <input className="car-create-finish-btn" type="submit" value="Finish" />
+                <input className="car-finish-btn" type="submit" value="Finish" />
 
                 <span className="car-errors">{this.renderErrors()}</span>
 

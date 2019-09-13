@@ -33,21 +33,19 @@ class CarIndex extends React.Component {
                 <button><img src={window.filters}/>More Filters</button>
             </div>
 
-            <div>
-
+            <div className="car-index">
+            <div className="car-list">
                 {carTile}
-            
+            </div>
+            </div>
+
+            <div className="car-map">
+                <img src={window.map}/>
             </div>
 
             </div >
         )
     }
-
-
-
-
-
-
 }
 
 export default CarIndex;

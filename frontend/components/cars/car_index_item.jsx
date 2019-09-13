@@ -22,7 +22,7 @@ class CarIndexItem extends React.Component {
             </div>
             
             <div className="car-price-card">
-                <span className="bold-proce">${this.props.car.rate}</span>
+                <span className="bold-price">${this.props.car.rate}</span>
                 <div className="per-day-card">/day</div>
             </div>
 
