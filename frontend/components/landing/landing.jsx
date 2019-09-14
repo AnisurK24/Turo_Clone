@@ -29,8 +29,8 @@ class Landing extends React.Component {
 
             {/* // Rental Counter */}
             <div className="counter-container">
-                <h3>SKIP THE RENTAL COUNTER</h3>
-                <h2>Discover the world’s largest car sharing marketplace</h2>
+                {/* <h3>SKIP THE RENTAL COUNTER</h3>
+                <h2>Discover the world’s largest car sharing marketplace</h2> */}
             </div>
 
             {/* // Footer */}
