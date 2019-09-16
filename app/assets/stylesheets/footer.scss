@@ -28,6 +28,7 @@
 
 .footer-title {
     padding-bottom: 20px;
+    white-space: nowrap;
 }
 
 .footer-ul-1 {
@@ -36,7 +37,7 @@
     line-height: 1.2;
     margin-bottom: 20px;
     padding-top: 40px;
-    margin-right: 8%;
+    margin-right: 12%;
 }
 
 .footer-ul-2 {
@@ -44,7 +45,7 @@
     font-weight: bold;
     line-height: 1.2;
     margin-bottom: 35px;
-    margin-right: 11%;
+    margin-right: 15%;
 }
 
 .footer-ul-3 {
@@ -52,7 +53,7 @@
     font-weight: bold;
     line-height: 1.2;
     margin-bottom: 20px;
-    margin-right: 8%;
+    margin-right: 12%;
 }
 
 .footer-li {
@@ -109,12 +110,14 @@
     list-style: none;
     flex-direction: row;
     cursor: not-allowed;
+    display: flex;
+    align-content: baseline;
 }
 
 .foot-arrow {
-    background-image: image-url('sprite.arrows.png') no-repeat -451px -121px;
-	width: 11px;
-	height: 7px;
+    // background-image: asset-url('sprite.arrows.png') no-repeat -451px -121px;
+	width: 25px;
+    height: 25px;
 }
 
 .app-store {
@@ -176,6 +179,11 @@
 .footer-inner-container {
     padding-bottom: 20px;
     padding-top: 25px;
+}
+
+.up {
+    font-size: 30px;
+    bottom: 6px;
 }
 
 // .eng {

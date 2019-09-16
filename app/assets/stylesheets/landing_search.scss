@@ -1,0 +1,143 @@
+.landing-search-time {
+    width: 115px;
+    height: 35px;
+    font-size: 18px;
+    border: 1px solid #c7c7c7;
+    color: #231f20;
+    background: white;
+    border: none;
+    font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
+}
+
+.landing-search-container {
+  color: #231f20;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  padding: 3px 0 3px 0;
+  background: #ffffff;
+  font-family: BasisGrotesque,Avenir,Helvetica Neue,Helvetica,sans-serif;
+  border-radius: 100px;
+  margin: 40px 50vw 0 50vw;
+  // z-index: 5;
+}
+
+.landing-search-form {
+  display: flex;
+  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 100px;
+  padding: 7px 0 7px 0;
+}
+
+.search-text {
+    font-size: 12px;
+    font-weight: 600px; 
+}
+
+.search-button {
+    background-image: image-url('search-glass.png');
+    background-position: center;
+    background-size: 40px 40px;
+    // outline: none !important;
+    border-radius: 999em;
+    align-self: center;
+    width: 40px;
+    height: 40px;
+    background-color: #59d389;
+    margin-right: 7px;
+    margin-top: 7px;
+    cursor: pointer;
+}
+
+.search-location {
+    display: flex;
+    flex-direction: column;
+    font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
+    padding-left: 20px;
+    padding-top: 5px;
+
+    input[type="text"] {
+        font-size: 18px;
+        background-color: #ffffff;
+        border-radius: 5px;
+        border: 1px solid #ffffff;
+        width: 300px;
+  }
+
+    input[type="datetime-local"] {
+        // padding-right: 10px;
+        font-size: 18px;
+        background-color: #ffffff;
+        border-radius: 5px;
+        font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
+        border: 1px solid #ffffff;
+        width: 300px;    
+  }
+
+    input:focus {
+        border: 1px solid #ffffff;
+        outline: none;
+  }
+}
+
+.search-start, .search-end {
+    display: flex;
+    flex-direction: column;
+    font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
+    padding-left: 20px;
+    border-left: 1px solid #c7c7c7;
+
+    input[type="text"] {
+        font-size: 13px;
+        background-color: #ffffff;
+        border-radius: 5px;
+        border: 1px solid #ffffff;
+        width: 300px;
+  }
+
+    input[type="datetime-local"] {
+        // padding-right: 10px;
+        font-size: 18px;
+        background-color: #ffffff;
+        border-radius: 5px;
+        font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
+        border: 1px solid #ffffff;
+        width: 300px;    
+  }
+
+    input:focus {
+        border: 1px solid #ffffff;
+        outline: none;
+  }
+}
+
+.date-time-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 2px 0 2px;
+
+        /* Removes the clear button from date inputs */
+    input[type="date"]::-webkit-clear-button {
+        display: none;
+    }
+
+    /* Removes the spin button */
+    input[type="date"]::-webkit-inner-spin-button { 
+        display: none;
+    }
+
+    /* Always display the drop down caret */
+    input[type="date"]::-webkit-calendar-picker-indicator {
+        color: #2c3e50;
+    }
+}
+
+.search-date {
+    font-size: 18px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    font-family: BasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
+    border: 1px solid #ffffff;
+    width: 135px;
+}

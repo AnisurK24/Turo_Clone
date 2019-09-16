@@ -138,7 +138,7 @@ class Footer extends React.Component {
                             <li className="foot">Terms</li>
                             <li className="foot">Privacy</li>
                             <li className="foot-last">Sitemap</li>
-                            <li className="last-li"><div className="foot-arrow"></div><img src={window.english}/>English (USA)</li>
+                            <li className="last-li"><div className="foot-arrow"><h1 className="up">^</h1></div><img src={window.english}/>English (USA)</li>
                         </ul>
                     </div>
                 </div>

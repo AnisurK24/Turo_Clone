@@ -1,6 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import LandingSearch from './landing_search';
+import moment from 'moment';
+import 'react-dates/initialize';
 
+import { Link } from 'react-router-dom';
 
 class Landing extends React.Component {
     constructor(props) {
@@ -19,7 +22,32 @@ class Landing extends React.Component {
                 <h2 className="small-banner">Book unforgettable cars from trusted hosts around the world</h2>
             
             </div>
-            {/* </div> */}
+            {/* Search */}
+            <div className="landing-search-container">
+                <div className="landing-search-form">
+                    <div className="search-location">
+                        <label className="search-text">Where</label>
+                        <input type="text" placeholder="City, airport, address, or hotel" defaultValue={`San Francisco, CA`}/>
+                    </div>
+                    <div className="search-start">
+                        <label className="search-text">From</label>
+                        <div className="date-time-container">
+                            <input className="search-date" type="date" defaultValue={moment().format('YYYY-MM-DD')}/>
+                            <LandingSearch />
+                        </div>
+                    </div>
+                    <div className="search-end">
+                        <label className="search-text">Until</label>
+                        <div className="date-time-container">
+                            <input className="search-date" type="date" defaultValue={moment().add(7, "days").format('YYYY-MM-DD')}/>
+                            <LandingSearch />
+                        </div>
+                    </div>
+                    <Link to={"/cars"}>
+                        <button className="search-button"/>
+                    </Link>
+                </div>
+            </div>
             </div>
             <div className="landing-insurance">
                 <p className="insurance-text">INSURANCE PROVIDER</p>
