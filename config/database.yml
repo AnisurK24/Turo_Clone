@@ -19,6 +19,7 @@ default: &default
   encoding: unicode
   # For details on connection pooling, see Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
+  url: <%= ENV['DATABASE_URL'] %>
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
@@ -78,8 +79,15 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+# production:
+#   <<: *default
+#   database: Turo_production
+#   username: Turo
+#   password: <%= ENV['TURO_DATABASE_PASSWORD'] %>
+
 production:
   <<: *default
-  database: Turo_production
-  username: Turo
-  password: <%= ENV['TURO_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  host: db
+  username: postgres
+  password:

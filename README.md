@@ -9,15 +9,22 @@ Turbo is fullstack web application that utilizes Ruby on Rails for backend, Post
 
 ## Technologies Used:
 
-- Javascript
-- Ruby on Rails
-- React/Redux
-- PostgreSQL
-- HTML/CSS
+* [Ruby on Rails](https://rubyonrails.org/)
+* [React](https://reactjs.org/)
+* [Redux](https://redux.js.org/)
+* [PostgreSQL](https://www.postgresql.org/)
+* [Javascript]
+* [HTML/CSS]
 
 ## Features:
 
+![Login gif](app/assets/images/ezgif.com-video-to-gif.gif)
+
+Here is a demonstration of the signup/login modal with an animated demo user login.
+
 ### User Authentication
+
+Users are required to signup or login in order to create cars and book rentals. User passwords are salted using the BCrypt hashing algorithm in order to be stored securely.
 
 ```ruby
 class User < ApplicationRecord
@@ -62,14 +69,81 @@ class User < ApplicationRecord
 end
 ```
 
+## Demo Login
 
-![Login gif](app/assets/images/ezgif.com-video-to-gif.gif)
+Using an async function I was able to display an animated demo login.
 
-Automated demo login button found on modal.
+```javascript
+async handleDemo(e) {
+    e.preventDefault();
+
+    const demoUser = {
+        email: 'demo@email.com',
+        password: 'password'
+    };
+
+    const sleep = ms => new Promise(res => setTimeout(res, ms));
+
+    document.getElementById('email-input').focus();
+    for (let i = 1; i <= demoUser.email.length; i++) {
+        this.setState({ email: demoUser.email.substr(0, i) });
+        await sleep(100);
+    }
+
+    await sleep(250);
+
+    document.getElementById('password-input').focus();
+    for (let i = 1; i <= demoUser.password.length; i++) {
+        this.setState({ password: demoUser.password.substr(0, i) });
+        await sleep(100);
+    }
+
+    await sleep(250);
+
+    document.getElementById('session-submit-btn').click();
+    document.getElementById('password-input').blur();
+}
+```
+
+## Modal
+
+Modal component that is rendered by managing the local state using Redux.
+
+```javascript
+function Modal({ modal, closeModal }) {
+
+    if (!modal) {
+        return null;
+    }
+
+    let component;
+    switch (modal) {
+        case 'Login':
+            component = <LoginFormContainer />;
+            break;
+        case 'Signup':
+            component = <SignupFormContainer />;
+            break;
+        default:
+            return null;
+    }
+
+    return (
+        <div className="modal-background" onClick={closeModal}>
+            <div className="modal-child" onClick={e => e.stopPropagation()}>
+                {component}
+            </div>
+        </div>
+    );
+}
+
+export default Modal
+```
+
 
 ## Future Releases:
 
-- Completion of car CRUD feature and CSS
+- Completion of car CRUD feature
 - Rentals
 - Reviews
 - Search
