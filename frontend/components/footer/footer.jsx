@@ -16,7 +16,7 @@ class Footer extends React.Component {
 
             <div className="footer-container">
                 <div className="footer-inner-container">
-                    <div className="footer-container-list-top">
+                    {/* <div className="footer-container-list-top">
 
                         <ul className="footer-ul-2">
                             <h4 className="footer-title">Turbo</h4>
@@ -129,7 +129,7 @@ class Footer extends React.Component {
                             <li className="footer-li">Seattle</li>
                             <li className="footer-li">Washington D.C.</li>
                         </ul>
-                    </div>
+                    </div> */}
 
                     <div className="footer-bottom">
                         {/* <h5 className="footer-copy">©2019 Turbo</h5> */}
