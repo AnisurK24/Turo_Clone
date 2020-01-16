@@ -31,7 +31,7 @@ const Navbar = ({ currentUser, logout, openModal }) => {
                 <Link to="/signup">Sign up</Link> */}
                 <img className="profile-out" src={window.profileicon} alt="profile"/>
             </nav>
-        )
+        ) 
     };
 
     const loggedIn = () => {
