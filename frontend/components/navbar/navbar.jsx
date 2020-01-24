@@ -32,7 +32,7 @@ const Navbar = ({ currentUser, logout, openModal }) => {
                 <img className="profile-out" src={window.profileicon} alt="profile"/>
             </nav>
         ) 
-    }; 
+    };
 
     const loggedIn = () => {
         return (
