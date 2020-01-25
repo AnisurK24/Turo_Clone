@@ -76,7 +76,7 @@ const Navbar = ({ currentUser, logout, openModal }) => {
                 </div>
             </nav>
         )
-    };
+    }; 
 
     return currentUser ? (loggedIn()) : (loggedOut())
 
