@@ -6,7 +6,7 @@ class CarCreate extends React.Component {
         this.state = this.props.formFields;
         this.handleSubmit = this.handleSubmit.bind(this);
     }
-
+ 
     handleInput(field) {
         return (e) => this.setState({
             [field]: e.target.value
