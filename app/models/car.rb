@@ -7,9 +7,13 @@ class Car < ApplicationRecord
     #     errors[:photos].push("Photos are required!") unless self.photos.attached?
     # end
 
-    validates :rate, :make, :model, :year, :color, :transmission, :doors, presence: true
-    validates :seats, :description, :plate, :address, :city, :state, :zip, :doors, presence: true
-    validates :transmission, inclusion: { in: %w(Automatic Manual None)}
+    TRANSMISSION_TYPE = %w(automatic manual none).freeze
+
+    validates :rate, :make, :model, :year, :color, :transmission, :seats, :description, :plate, :address, :city, :state, :zip, :doors, presence: true
+
+    validates :awd, :audio_input, :bike_rack, :bluetooth, :child_seat, :convertible, :gps, :heated_seats, :longterm_car, :pet_friendly, :ski_rack, :snow_tires_chains, :sunroof, :toll_pass, :usb_input, inclusion: [true, false]
+
+    validates :transmission, inclusion: TRANSMISSION_TYPE, unless: -> { transmission.blank? }
     
 
     belongs_to :user,
