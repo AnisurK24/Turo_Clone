@@ -23,8 +23,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     
-    
+    // TESTING
     window.getState = store.getState;
+    window.dispatch = store.dispatch;
+    /* users */
+    window.login = login;
+    window.signup = signup;
+    window.logout = logout;
+    /* cars */
+    window.fetchCars = fetchCars;
+    window.fetchCar = fetchCar;
+    window.editCar = editCar;
+    window.createCar = createCar;
+    window.deleteCar = deleteCar;
     
     
     const root = document.getElementById('root');
