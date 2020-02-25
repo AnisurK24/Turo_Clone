@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_13_040344) do
+ActiveRecord::Schema.define(version: 2020_02_25_033136) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -56,6 +56,22 @@ ActiveRecord::Schema.define(version: 2019_09_13_040344) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "doors", null: false
+    t.boolean "awd", default: false, null: false
+    t.boolean "bluetooth", default: false, null: false
+    t.boolean "child_seat", default: false, null: false
+    t.boolean "convertible", default: false, null: false
+    t.boolean "gps", default: false, null: false
+    t.boolean "heated_seats", default: false, null: false
+    t.boolean "longterm_car", default: false, null: false
+    t.boolean "pet_friendly", default: false, null: false
+    t.boolean "ski_rack", default: false, null: false
+    t.boolean "snow_tires_chains", default: false, null: false
+    t.boolean "sunroof", default: false, null: false
+    t.boolean "toll_pass", default: false, null: false
+    t.boolean "usb_input", default: false, null: false
+    t.integer "mpg"
+    t.boolean "audio_input", default: false, null: false
+    t.boolean "bike_rack", default: false, null: false
     t.index ["owner_id"], name: "index_cars_on_owner_id"
   end
 
