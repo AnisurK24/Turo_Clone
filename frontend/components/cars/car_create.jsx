@@ -20,8 +20,10 @@ class CarCreate extends React.Component {
         this.props.createCar(formData)
             .then((payload) => this.props.history.push(`/cars/${payload.car.id}`));
 
-        for (let i = 0; i < this.state.photos.length; i++) {
-            formData.append('car[photos][]', this.state.photos[i]);
+        if (this.state.photos) {
+            for (let i = 0; i < this.state.photos.length; i++) {
+                formData.append('car[photos][]', this.state.photos[i]);
+            }
         }
     }
 
@@ -35,6 +37,10 @@ class CarCreate extends React.Component {
             ))}
         </ul>
         );
+    }
+
+    navigateToIdx() {
+        this.props.history.push('/cars/');
     }
 
     render() {
