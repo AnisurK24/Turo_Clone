@@ -13,6 +13,14 @@ class CarCreate extends React.Component {
         });
     }
 
+    handleCheckbox(field) {
+        return e => {
+            this.setState({
+                [field]: e.target.checked
+            });
+        };
+    }
+
     handleSubmit(e) {
         e.preventDefault();
 
