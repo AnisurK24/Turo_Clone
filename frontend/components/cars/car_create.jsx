@@ -129,7 +129,13 @@ class CarCreate extends React.Component {
                 <br />
 
                 <h2>Car Details</h2>
+                
                 <br />
+
+                <label htmlFor="">Daily Rate (USD)
+                    <input type="text" placeholder="Daily Rate" value={this.props.rate} onChange={this.update("rate")}/>
+                </label>
+
                 <br />
 
                 <label>Daily Rate
