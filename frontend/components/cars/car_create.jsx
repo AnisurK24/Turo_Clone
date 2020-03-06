@@ -129,13 +129,8 @@ class CarCreate extends React.Component {
                 <br />
 
                 <h2>Car Details</h2>
-                
+
                 <br />
-
-                <label htmlFor="">Daily Rate (USD)
-                    <input type="text" placeholder="Daily Rate" value={this.props.rate} onChange={this.update("rate")}/>
-                </label>
-
                 <br />
 
                 <label>Daily Rate
@@ -149,6 +144,51 @@ class CarCreate extends React.Component {
                 <br />
                     <textarea placeholder="A detailed description will get you more trips!" value={this.props.description} onChange={this.handleInput("description")}></textarea>
                 </label>
+
+                <h3>Features</h3>
+                    <div className="features-wrapper">
+                    <div>
+                    <label><input type="checkbox" value={this.state.awd} onChange={this.updateCheckbox("awd")} /> All-wheel-drive</label>
+                        <br/>
+                        <label><input type="checkbox" value={this.state.audioInput} onChange={this.updateCheckbox("audioInput")} /> Audio input</label>
+                        <br />
+                        <label><input type="checkbox" value={this.state.bikeRack} onChange={this.updateCheckbox("bikeRack")} /> Bike rack</label>
+                        <br />
+                    </div>
+                    <div>              
+                        <label><input type="checkbox" value={this.state.bluetooth} onChange={this.updateCheckbox("bluetooth")} /> Bluetooth</label>
+                        <br />
+                        <label><input type="checkbox" value={this.state.childSeat} onChange={this.updateCheckbox("childSeat")} /> Child seat</label>
+                        <br />
+                        <label><input type="checkbox" value={this.state.convertible} onChange={this.updateCheckbox("convertible")} /> Convertible</label>
+                        <br />
+                    </div>
+                    <div>            
+                        <label><input type="checkbox" value={this.state.gps} onChange={this.updateCheckbox("gps")} /> GPS</label>
+                        <br />
+                        <label><input type="checkbox" value={this.state.heatedSeats} onChange={this.updateCheckbox("heatedSeats")} /> Heated seats</label>
+                        <br/>
+                        <label><input type="checkbox" value={this.state.longtermCar} onChange={this.updateCheckbox("longtermCar")} /> Longterm car</label>
+                        <br />
+                    </div>
+                    <div>            
+                        <label><input type="checkbox" value={this.state.petFriendly} onChange={this.updateCheckbox("petFriendly")} /> Pet friendly</label>
+                        <br />
+                        <label><input type="checkbox" value={this.state.skiRack} onChange={this.updateCheckbox("skiRack")} /> Ski rack</label>
+                        <br/>
+                        <label><input type="checkbox" value={this.state.snowTiresChains} onChange={this.updateCheckbox("snowTiresChains")} /> Snow tires/Chains</label>
+                        <br />
+                    </div>
+                    <div>            
+                        <label><input type="checkbox" value={this.state.sunroof} onChange={this.updateCheckbox("sunroof")} /> Sunroof</label>
+                        <br />
+                        <label><input type="checkbox" value={this.state.tollPass} onChange={this.updateCheckbox("tollPass")} /> Toll pass</label>
+                        <br />
+                        <label><input type="checkbox" value={this.state.usbInput} onChange={this.updateCheckbox("usbInput")} /> USB input</label>
+                        <br />
+                    </div>
+                    </div>
+                <br/>
 
                 <br />
 
