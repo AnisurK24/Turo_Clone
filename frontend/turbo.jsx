@@ -27,15 +27,15 @@ document.addEventListener('DOMContentLoaded', () => {
     window.getState = store.getState;
     window.dispatch = store.dispatch;
     /* users */
-    window.login = login;
-    window.signup = signup;
-    window.logout = logout;
+    // window.login = login;
+    // window.signup = signup;
+    // window.logout = logout;
     /* cars */
-    window.fetchCars = fetchCars;
-    window.fetchCar = fetchCar;
-    window.editCar = editCar;
-    window.createCar = createCar;
-    window.deleteCar = deleteCar;
+    // window.fetchCars = fetchCars;
+    // window.fetchCar = fetchCar;
+    // window.editCar = editCar;
+    // window.createCar = createCar;
+    // window.deleteCar = deleteCar;
     
     
     const root = document.getElementById('root');
