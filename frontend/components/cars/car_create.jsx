@@ -54,7 +54,7 @@ class CarCreate extends React.Component {
     }
 
     render() {
-
+        console.log(this.props)
         return (
             <div className="create-car-container">
                 <div className="create-car-banner">
@@ -69,19 +69,19 @@ class CarCreate extends React.Component {
                     <br />
 
                 <label>Address
-                    <input type="text" placeholder="Address" value={this.props.address} onChange={this.handleInput("address")}></input>
+                    <input type="text" placeholder="Address" value={this.state.address} onChange={this.handleInput("address")}></input>
                 </label>
 
                 <label>City
-                    <input type="text" placeholder="City" value={this.props.city} onChange={this.handleInput("city")}></input>
+                    <input type="text" placeholder="City" value={this.state.city} onChange={this.handleInput("city")}></input>
                 </label>
 
                 <label>State
-                    <input type="text" placeholder="State" value={this.props.state} onChange={this.handleInput("state")}></input>
+                    <input type="text" placeholder="State" value={this.state.state} onChange={this.handleInput("state")}></input>
                 </label>
 
                 <label>Zip
-                    <input type="text" placeholder="Zip" value={this.props.zip} onChange={this.handleInput("zip")}></input>
+                    <input type="text" placeholder="Zip" value={this.state.zip} onChange={this.handleInput("zip")}></input>
                 </label>
 
                 <br />
@@ -91,31 +91,31 @@ class CarCreate extends React.Component {
                 <br />
 
                 <label>Year
-                    <input type="text" placeholder="Year" value={this.props.year} onChange={this.handleInput("year")} />
+                    <input type="text" placeholder="Year" value={this.state.year} onChange={this.handleInput("year")} />
                 </label>
 
                 <label>Make
-                    <input type="text" placeholder="Make" value={this.props.make} onChange={this.handleInput("make")} />
+                    <input type="text" placeholder="Make" value={this.state.make} onChange={this.handleInput("make")} />
                 </label>
 
                 <label>Model
-                    <input type="text" placeholder="Model" value={this.props.model} onChange={this.handleInput("model")} />
+                    <input type="text" placeholder="Model" value={this.state.model} onChange={this.handleInput("model")} />
                 </label>
 
                 <label>Color
-                    <input type="text" placeholder="Color" value={this.props.color} onChange={this.handleInput("color")} />
+                    <input type="text" placeholder="Color" value={this.state.color} onChange={this.handleInput("color")} />
                 </label>
 
                 <label>Doors
-                    <input type="text" placeholder="Number of doors" value={this.props.doors} onChange={this.handleInput("doors")} />
+                    <input type="text" placeholder="Number of doors" value={this.state.doors} onChange={this.handleInput("doors")} />
                 </label>
 
                 <label>Seats
-                    <input type="text" placeholder="Number of seats" value={this.props.seats} onChange={this.handleInput("seats")} />
+                    <input type="text" placeholder="Number of seats" value={this.state.seats} onChange={this.handleInput("seats")} />
                 </label>
 
                 <label>License plate
-                    <input type="text" placeholder="License plate" value={this.props.plate} onChange={this.handleInput("plate")} />
+                    <input type="text" placeholder="License plate" value={this.state.plate} onChange={this.handleInput("plate")} />
                 </label>
 
                 <br />
@@ -135,14 +135,14 @@ class CarCreate extends React.Component {
 
                 <label>Daily Rate
                 <br />
-                    <input type="text" placeholder="Daily Rate in (USD)" value={this.props.rate} onChange={this.handleInput("rate")} />
+                    <input type="text" placeholder="Daily Rate in (USD)" value={this.state.rate} onChange={this.handleInput("rate")} />
                 </label>
 
                 <br />
 
                 <label>Description
                 <br />
-                    <textarea placeholder="A detailed description will get you more trips!" value={this.props.description} onChange={this.handleInput("description")}></textarea>
+                    <textarea placeholder="A detailed description will get you more trips!" value={this.state.description} onChange={this.handleInput("description")}></textarea>
                 </label>
 
                 <h3>Features</h3>
