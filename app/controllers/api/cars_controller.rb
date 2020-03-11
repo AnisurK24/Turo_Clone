@@ -11,6 +11,7 @@ class Api::CarsController < ApplicationController
   end
 
   def create
+    puts car_params.inspect
     @car = Car.new(car_params)
     @car.owner_id = current_user.id
     if @car.save
@@ -42,6 +43,7 @@ class Api::CarsController < ApplicationController
   private
 
   def car_params
+    # puts params.inspect
     params.require(:car).permit(
       :rate, 
       :make, 
@@ -59,7 +61,7 @@ class Api::CarsController < ApplicationController
       :doors, 
       :lat, 
       :lng, 
-      :mpg, 
+      # :mpg, 
       :awd, 
       :audio_input, 
       :bike_rack, 
