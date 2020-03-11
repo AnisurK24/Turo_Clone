@@ -16,7 +16,7 @@ class Car < ApplicationRecord
     validates :transmission, inclusion: TRANSMISSION_TYPE, unless: -> { transmission.blank? }
     
 
-    belongs_to :user,
+    belongs_to :owner,
     foreign_key: :owner_id, 
     class_name: :User
 
