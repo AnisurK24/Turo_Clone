@@ -14,7 +14,8 @@ class Api::CarsController < ApplicationController
     @car = Car.new(car_params)
     @car.owner_id = current_user.id
     if @car.save
-      render "api/cars/show"
+      # render "api/cars/show"
+      render :show
     else
       render json: @car.errors.full_messages, status: 422
     end
