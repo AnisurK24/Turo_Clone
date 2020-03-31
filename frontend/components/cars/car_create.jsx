@@ -28,31 +28,32 @@ class CarCreate extends React.Component {
         // console.log("state before submit", this.state)
         const formData = new FormData();
 
-        formData.append("car[address]", this.state.address);
-        formData.append("car[rate]", this.state.rate);
-        formData.append("car[make]", this.state.make);
-        formData.append("car[model]", this.state.model);
-        formData.append("car[year]", this.state.year);
-        formData.append("car[color]", this.state.color);
-        formData.append("car[transmission]", this.state.transmission);
-        formData.append("car[seats]", this.state.seats);
-        formData.append("car[doors]", this.state.doors);
-        formData.append("car[mpg]", this.state.mpg);
-        formData.append("car[description]", this.state.description);
-        formData.append("car[plate]", this.state.plate);
-        formData.append("car[address]", this.state.address);
-        formData.append("car[city]", this.state.city);
-        formData.append("car[state]", this.state.state);
-        formData.append("car[zip]", this.state.zip);
-        formData.append("car[lat]", this.state.lat);
-        formData.append("car[lng]", this.state.lng);
-        // formData.append('car[test_key]', "testvalue");
+        // formData.append("car[address]", this.state.address);
+        // formData.append("car[rate]", this.state.rate);
+        // formData.append("car[make]", this.state.make);
+        // formData.append("car[model]", this.state.model);
+        // formData.append("car[year]", this.state.year);
+        // formData.append("car[color]", this.state.color);
+        // formData.append("car[transmission]", this.state.transmission);
+        // formData.append("car[seats]", this.state.seats);
+        // formData.append("car[doors]", this.state.doors);
+        // formData.append("car[mpg]", this.state.mpg);
+        // formData.append("car[description]", this.state.description);
+        // formData.append("car[plate]", this.state.plate);
+        // formData.append("car[address]", this.state.address);
+        // formData.append("car[city]", this.state.city);
+        // formData.append("car[state]", this.state.state);
+        // formData.append("car[zip]", this.state.zip);
+        // formData.append("car[lat]", this.state.lat);
+        // formData.append("car[lng]", this.state.lng);
 
-        // for (let key in this.state) {
-        //     if (key != "photos") {
-        //       formData.append(`car[${key}]`, this.state[`${key}`]);
-        //     }
-        // }
+        formData.append('car[test_key]', "testvalue");
+
+        for (let key in this.state) {
+            if (key != "photos") {
+              formData.append(`car[${key}]`, this.state[`${key}`]);
+            }
+        }
         
         
         if (this.state.photos) {
