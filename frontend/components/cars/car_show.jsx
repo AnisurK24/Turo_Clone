@@ -18,9 +18,15 @@ class CarShow extends React.Component {
         this.props.history.push('/cars/');
     }
 
+    componentDidMount() {
+        this.props.fetchCar(this.props.match.params.id);
+    }
+
     render() {
 
-
+        if (!this.props.car) {
+            return null;
+        }
 
         return (
 
