@@ -25,8 +25,9 @@ const App = () => (
         </header>
 
         <Switch>
-            <ProtectedRoute exact path="/cars/:id/edit" component={CarUpdateContainer} />
             <ProtectedRoute exact path="/cars/new" component={CarCreateContainer} />
+            <ProtectedRoute exact path="/cars/:id/edit" component={CarUpdateContainer} />
+            <ProtectedRoute exact path="/cars/:id" component={CarShowContainer} />
             <Route exact path="/cars" component={CarIndexContainer} />
             <Route exact path="/" component={LandingContainer} />
             <Redirect to="/" />
