@@ -29,7 +29,7 @@ class CarShow extends React.Component {
         }
 
         return (
-
+            <div>car show page</div>
         )
     }
 }

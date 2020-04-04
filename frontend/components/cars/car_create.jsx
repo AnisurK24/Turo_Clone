@@ -80,10 +80,6 @@ class CarCreate extends React.Component {
         );
     }
 
-    navigateToIdx() {
-        this.props.history.push('/cars/');
-    }
-
     render() {
         console.log(this.props)
         console.log(this.state);
