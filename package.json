@@ -9,7 +9,7 @@
     "@babel/runtime": "^7.5.5",
     "babel-loader": "^8.0.6",
     "babel-polyfill": "^6.26.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "react": "^16.9.0",
     "react-dates": "^21.0.1",
     "react-dom": "^16.9.0",
